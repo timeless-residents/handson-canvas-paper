@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paper.js Minimal Example</title>
+    <!-- Paper.jsをCDNから読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper-full.min.js"></script>
+    <style>
+        /* キャンバスのスタイル設定 */
+        canvas {
+            border: 1px solid #999;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- キャンバス要素 -->
+    <canvas id="myCanvas" width="500" height="300"></canvas>
+
+    <!-- Paper.jsのスクリプト -->
+    <script type="text/javascript">
+        // Paper.jsをキャンバスにセットアップ
+        paper.setup('myCanvas');
+
+        // 基本的な図形を描画（例：円）
+        var circle = new paper.Path.Circle({
+            center: paper.view.center,
+            radius: 50,
+            fillColor: 'blue'
+        });
+
+        // 描画を表示
+        paper.view.draw();
+    </script>
+</body>
+</html>
